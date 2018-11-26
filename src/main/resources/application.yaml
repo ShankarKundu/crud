@@ -1,0 +1,13 @@
+server:
+  port: 8181
+spring:
+  port: 9090
+  cloud:
+   stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        students-out:
+          destination: students
+          contentType: application/json
